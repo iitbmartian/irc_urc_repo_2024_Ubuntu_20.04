@@ -1,0 +1,8 @@
+prefix=/home/arinweling/rover_ws/base_ws/install
+
+Name: rover_drive
+Description: Description of rover_drive
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

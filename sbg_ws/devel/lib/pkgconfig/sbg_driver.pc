@@ -1,0 +1,8 @@
+prefix=/home/arinweling/sbg_ws/devel
+
+Name: sbg_driver
+Description: Description of sbg_driver
+Version: 3.1.1
+Cflags: -I/home/arinweling/sbg_ws/devel/include -I/home/arinweling/sbg_ws/src/sbg_ros_driver/src
+Libs: -L${prefix}/lib 
+Requires: message_runtime roscpp sensor_msgs std_msgs std_srvs geometry_msgs

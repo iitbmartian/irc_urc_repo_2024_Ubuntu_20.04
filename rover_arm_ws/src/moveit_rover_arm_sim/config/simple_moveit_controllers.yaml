@@ -1,0 +1,18 @@
+controller_list:
+  - name: robot_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - base_rotation_joint
+      - shoulder_rotation
+      - elbow_rotation
+      - arm_rotation
+      - gripper_pitch
+  - name: hand_ee_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - gripper_rotation
+      - palm_joint

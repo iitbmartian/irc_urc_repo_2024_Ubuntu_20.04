@@ -1,0 +1,8 @@
+prefix=/home/arinweling/rover_arm_ws/devel/.private/urc23final_arm
+
+Name: urc23final_arm
+Description: Description of urc23final_arm
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp rospy std_msgs

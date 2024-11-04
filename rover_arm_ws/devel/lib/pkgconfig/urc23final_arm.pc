@@ -1,0 +1,1 @@
+/home/arinweling/rover_arm_ws/devel/.private/urc23final_arm/lib/pkgconfig/urc23final_arm.pc

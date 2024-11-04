@@ -1,0 +1,2 @@
+arm_rrmc:basestation:bot_description:rover-bio:rover_drive:rover_msgs
+-DCATKIN_DEVEL_PREFIX=/home/arinweling/rover_ws/base_ws/devel -DCMAKE_INSTALL_PREFIX=/home/arinweling/rover_ws/base_ws/install -G Unix Makefiles

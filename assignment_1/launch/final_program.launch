@@ -1,0 +1,10 @@
+<launch>
+
+    <node pkg="assignment_1" type="image_sender.py" name="sender">
+        
+    </node>
+    <node pkg="assignment_1" type="image_receiver.py" name="receiver">
+        
+    </node>
+
+</launch>

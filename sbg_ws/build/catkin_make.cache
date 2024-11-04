@@ -1,0 +1,2 @@
+sbg_ros_driver
+-DCATKIN_DEVEL_PREFIX=/home/arinweling/sbg_ws/devel -DCMAKE_INSTALL_PREFIX=/home/arinweling/sbg_ws/install -G Unix Makefiles

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot name="sachin">
+
+<link name="left_gripper">
+    <visual>
+      <origin rpy="0.0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://custom_server/mesh/robot.stl"/>
+      </geometry>
+    </visual>
+  </link>

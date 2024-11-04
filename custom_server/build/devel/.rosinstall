@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/arinweling/catkin_ws/src/custom_server/build/devel/setup.sh

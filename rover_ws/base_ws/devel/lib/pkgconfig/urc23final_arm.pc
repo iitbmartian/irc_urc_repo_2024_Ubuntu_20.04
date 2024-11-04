@@ -1,0 +1,8 @@
+prefix=/home/arinweling/rover_ws/base_ws/devel
+
+Name: urc23final_arm
+Description: Description of urc23final_arm
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

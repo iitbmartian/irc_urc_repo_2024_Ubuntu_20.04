@@ -1,0 +1,11 @@
+<launch>
+    <node pkg="project" type="client.py" name="client" output="screen" launch-prefix="xterm -e"/>
+    
+    <node pkg="project" type="server.py" name="server" output="screen" launch-prefix="xterm -e"/>
+    <node pkg="project" type="publisher.py" name="publisher" output="screen" launch-prefix="xterm -e"/>
+
+    
+ 
+    
+    
+</launch>

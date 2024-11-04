@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/arinweling/rover_arm_ws/devel/.private/moveit_rover_arm_sim/setup.sh

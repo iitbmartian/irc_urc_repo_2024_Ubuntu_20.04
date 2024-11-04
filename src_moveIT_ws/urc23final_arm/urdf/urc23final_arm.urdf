@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="urc23final_arm">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0.0603246661212797 0.217515542424428 0.127534424617061" rpy="0 0 0" />
+            <mass value="79.0617361629743" />
+            <inertia ixx="5.82614585947853" ixy="1.70560439059488E-16" ixz="-4.09098676431373E-16" iyy="4.66673961070968" iyz="-1.60173723183888" izz="3.60534040101563" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="base_rotation">
+        <inertial>
+            <origin xyz="-4.09394740330526E-15 0.0477688408231929 -0.00156120213569086" rpy="0 0 0" />
+            <mass value="0.12637311705397" />
+            <inertia ixx="0.000285010578626874" ixy="5.37348364974634E-22" ixz="-1.51854154192275E-20" iyy="0.000242437755857635" iyz="7.36564926068934E-14" izz="0.000138412184731081" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/base_rotation.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.96078431372549 0.96078431372549 0.964705882352941 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/base_rotation.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_rotation_joint" type="revolute">
+        <origin xyz="0.060325 -0.11137 0.093049" rpy="1.5708 0 0" />
+        <parent link="base_link" />
+        <child link="base_rotation" />
+        <axis xyz="0 -1 0" />
+        <limit lower="-1.57" upper="1.57" effort="20" velocity="1" />
+    </joint>
+    <link name="shoulder">
+        <inertial>
+            <origin xyz="1.36696209906972E-15 0.229734002557454 -0.0188983810765576" rpy="0 0 0" />
+            <mass value="1.56729214697193" />
+            <inertia ixx="0.0134535222438073" ixy="2.35924360277525E-16" ixz="-1.60404400799312E-17" iyy="0.00182033898741546" iyz="0.000702998589090253" izz="0.0124179951223639" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/shoulder.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/shoulder.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="shoulder_rotation" type="revolute">
+        <origin xyz="0 0.085 0" rpy="3.1416 0 3.1416" />
+        <parent link="base_rotation" />
+        <child link="shoulder" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-1.57" upper="1.57" effort="20" velocity="1" />
+    </joint>
+    <link name="elbow">
+        <inertial>
+            <origin xyz="-9.22970098266029E-09 0.0535648381784446 0.000234961157169367" rpy="0 0 0" />
+            <mass value="0.254176145162905" />
+            <inertia ixx="0.000674443953170071" ixy="3.31994866744267E-11" ixz="3.01193310138557E-09" iyy="0.000207211717182606" iyz="1.29972885076442E-06" izz="0.000654879861706942" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/elbow.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/elbow.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="elbow_rotation" type="revolute">
+        <origin xyz="0 0.59743 -0.055422" rpy="-1.5708 0 0" />
+        <parent link="shoulder" />
+        <child link="elbow" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-1.57" upper="1.57" effort="20" velocity="1" />
+    </joint>
+    <link name="elbow_link">
+        <inertial>
+            <origin xyz="0.244488163167704 -3.49133739002694E-08 -7.02941262975543E-08" rpy="0 0 0" />
+            <mass value="0.119802792600848" />
+            <inertia ixx="4.28029579106562E-05" ixy="-1.3695670601466E-10" ixz="-4.95481348866479E-11" iyy="0.00128323794233793" iyz="1.71267929875785E-10" izz="0.00127976361585783" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/elbow_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/elbow_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm_rotation" type="revolute">
+        <origin xyz="0 0.099935 0" rpy="0 0 1.5708" />
+        <parent link="elbow" />
+        <child link="elbow_link" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-1.57" upper="1.57" effort="20" velocity="1" />
+    </joint>
+    <link name="gripper_truss">
+        <inertial>
+            <origin xyz="0.0865878951517725 -5.79459556671047E-07 0.0124024739381755" rpy="0 0 0" />
+            <mass value="0.169393754164764" />
+            <inertia ixx="0.000142042181232862" ixy="1.13117196478974E-10" ixz="-1.02101863730499E-07" iyy="9.89074307045755E-05" iyz="1.56559194275799E-09" izz="6.95333851382358E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/gripper_truss.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/gripper_truss.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="gripper_pitch" type="revolute">
+        <origin xyz="0.443 0 0" rpy="1.5708 0 0" />
+        <parent link="elbow_link" />
+        <child link="gripper_truss" />
+        <axis xyz="0 -1 0" />
+        <limit lower="-1.57" upper="1.57" effort="20" velocity="1" />
+    </joint>
+    <link name="gripper">
+        <inertial>
+            <origin xyz="-0.0486941699774995 0.000202119278247585 -0.0132263797847579" rpy="0 0 0" />
+            <mass value="0.458189452482593" />
+            <inertia ixx="0.000461729648469846" ixy="-1.32210723277576E-06" ixz="-8.7077562672622E-05" iyy="0.000730350027632024" iyz="-3.90609771741417E-06" izz="0.000813105761945276" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/gripper.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/gripper.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="gripper_rotation" type="revolute">
+        <origin xyz="0.115 0 0" rpy="-1.5708 0 3.1416" />
+        <parent link="gripper_truss" />
+        <child link="gripper" />
+        <axis xyz="-1 0 0" />
+        <limit effort="20" velocity="1" />
+    </joint>
+    <link name="palm">
+        <inertial>
+            <origin xyz="0.00159163379721702 -0.0612260118797257 -0.00950239244098561" rpy="0 0 0" />
+            <mass value="0.135791988160578" />
+            <inertia ixx="9.34675406598337E-05" ixy="-4.72732461561749E-06" ixz="-1.69234792949761E-06" iyy="0.000130523988454061" iyz="-1.63940602410983E-05" izz="0.000198246106172532" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/palm.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://urc23final_arm/meshes/palm.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="palm_joint" type="revolute">
+        <origin xyz="-0.03015 0 0.0266" rpy="-0.013031 0 -1.5708" />
+        <parent link="gripper" />
+        <child link="palm" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-1.57" upper="1.57" effort="20" velocity="1" />
+    </joint>
+    <transmission name="trans_base_rotation_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="base_rotation_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="base_rotation_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_shoulder_rotation">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="shoulder_rotation">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="shoulder_rotation_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_elbow_rotation">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="elbow_rotation">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="elbow_rotation_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_arm_rotation">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_rotation">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_rotation_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_gripper_pitch">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="gripper_pitch">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="gripper_pitch_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_gripper_rotation">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="gripper_rotation">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="gripper_rotation_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_palm_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="palm_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="palm_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

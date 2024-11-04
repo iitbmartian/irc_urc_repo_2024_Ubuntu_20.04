@@ -1,0 +1,8 @@
+sensor_msgs/Image detected_image
+---
+float64 distance_to_marker
+float64 angle
+std_msgs/String orient
+geometry_msgs/Pose origin
+
+

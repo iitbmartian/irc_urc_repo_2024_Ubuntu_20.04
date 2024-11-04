@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/arinweling/rover_arm_ws/devel/.private/urc23final_arm/setup.sh

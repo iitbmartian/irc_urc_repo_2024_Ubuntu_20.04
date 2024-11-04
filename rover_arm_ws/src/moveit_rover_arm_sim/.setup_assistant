@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: urc23final_arm
+    relative_path: urdf/urc23final_arm.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/urc23final_arm.srdf
+  CONFIG:
+    author_name: Arin Weling
+    author_email: arin4104weling@gmail.com
+    generated_timestamp: 1688759921

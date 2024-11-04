@@ -1,0 +1,8 @@
+prefix=/home/arinweling/rover_ws/base_ws/devel
+
+Name: basestation
+Description: Description of basestation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

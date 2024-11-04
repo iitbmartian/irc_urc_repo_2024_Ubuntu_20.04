@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="sachin">
+    <link name="link_name">
+        <visual>
+            <geometry>
+                <mesh filename="package://myrobot/meshes/robot.stl" scale="0.001 0.001 0.001"/>
+                
+
+            </geometry>
+            <material name="LightGrey">
+                <color rgba="0.7 0.7 0.7 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://myrobot/meshes/robot.stl" scale="0.001 0.001 0.001"/>
+                
+               
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="10.0"/>
+            <origin xyz="0.0 0.0 10.0" rpy="0.0 0.0 0.0"/>
+            <inertia ixx="0.15" ixy="0.0" ixz="0.0" iyy="0.15" iyz="0.0" izz="0.125"/>
+        </inertial>
+    </link>
+    
+</robot>

@@ -1,0 +1,8 @@
+prefix=/home/arinweling/rover_ws/base_ws/install
+
+Name: arm_rrmc
+Description: Description of arm_rrmc
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
