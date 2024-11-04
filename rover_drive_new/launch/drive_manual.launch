@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="rover_drive_new" name="Drive_Node" type="drive_manual.py" output="screen" required="true" />
+	</launch>
